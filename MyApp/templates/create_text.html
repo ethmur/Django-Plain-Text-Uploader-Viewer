@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1>Create New Text</h1>
+	<form action="/post_text/" method="post">
+		{% csrf_token %}
+		Text: <input type="text" name="text">
+		<input type="submit" value="Submit">
+	</form>
+{% endblock %}
